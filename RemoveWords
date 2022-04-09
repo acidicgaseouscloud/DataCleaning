@@ -1,0 +1,18 @@
+# Import packages
+import nltk
+nltk.download('punkt')
+
+# Initialise stop words
+
+BadWords = ["removed", "deleted"]
+
+# Define function
+
+def RemBadWords(text):
+    a = [token for token in nltk.word_tokenize(text)
+           if token not in BadWords]
+    return " ".join(a)
+    
+# Use function
+
+text = RemBadWords(text)
