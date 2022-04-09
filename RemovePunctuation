@@ -1,0 +1,13 @@
+# Define function
+
+def puncStrip(string): 
+    punctuation = '''`!()-–[]{};:'"\,<>./?@#$%^&*_~'''
+    puncLessString = ""
+    for char in string: 
+        if char not in punctuation:
+            puncLessString += char
+    return puncLessString    
+    
+# Use function
+
+puncStrip(text)
