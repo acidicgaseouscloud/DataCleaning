@@ -1,12 +1,11 @@
 # Define function
 
-def puncStrip(string): 
-    punctuation = '''`!()-–[]{};:'"\,<>./?@#$%^&*_~'''
-    puncLessString = ""
-    for char in string: 
-        if char not in punctuation:
-            puncLessString += char
-    return puncLessString    
+import string
+
+def puncStrip(text): 
+    for char in string.punctuation: 
+	    puncLessText = text.replace(char, '')
+    return puncLessText    
     
 # Use function
 
